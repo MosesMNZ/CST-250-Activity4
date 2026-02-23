@@ -16,15 +16,15 @@ namespace PizzaMaker
 
         private void InitializeComponent()
         {
-            txtName = new Label();
-            textBox1 = new TextBox();
+            lblName = new Label();
+            txtName = new TextBox();
             grpIngredients = new GroupBox();
-            checkBox1 = new CheckBox();
+            chbPepperoni = new CheckBox();
             chbBacon = new CheckBox();
             chbOlives = new CheckBox();
             chbMushrooms = new CheckBox();
             chbPineapple = new CheckBox();
-            checkBox6 = new CheckBox();
+            chbPepper = new CheckBox();
             chbSausage = new CheckBox();
             chbTomatoes = new CheckBox();
             label1 = new Label();
@@ -35,6 +35,8 @@ namespace PizzaMaker
             rdoStuffedCrust = new RadioButton();
             rdoGlutenFree = new RadioButton();
             gpbExtraGoodies = new GroupBox();
+            lblCheese = new Label();
+            lblSauce = new Label();
             label2 = new Label();
             hsbSauce = new HScrollBar();
             label3 = new Label();
@@ -47,38 +49,37 @@ namespace PizzaMaker
             lblPizzaPrice = new Label();
             btnResetForm = new Button();
             btnCreatePizza = new Button();
-            lblSauce = new Label();
-            lblCheese = new Label();
             grpIngredients.SuspendLayout();
             gpbCrust.SuspendLayout();
             gpbExtraGoodies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picPizzaBoxColor).BeginInit();
             SuspendLayout();
             // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Location = new Point(24, 38);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(84, 29);
+            lblName.TabIndex = 0;
+            lblName.Text = "Name:";
+            // 
             // txtName
             // 
-            txtName.AutoSize = true;
-            txtName.Location = new Point(24, 38);
+            txtName.Location = new Point(106, 35);
             txtName.Name = "txtName";
-            txtName.Size = new Size(84, 29);
-            txtName.TabIndex = 0;
-            txtName.Text = "Name:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(106, 35);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(200, 35);
-            textBox1.TabIndex = 1;
+            txtName.Size = new Size(200, 35);
+            txtName.TabIndex = 1;
+            txtName.Leave += TxtNameLeaveEH;
             // 
             // grpIngredients
             // 
-            grpIngredients.Controls.Add(checkBox1);
+            grpIngredients.Controls.Add(chbPepperoni);
             grpIngredients.Controls.Add(chbBacon);
             grpIngredients.Controls.Add(chbOlives);
             grpIngredients.Controls.Add(chbMushrooms);
             grpIngredients.Controls.Add(chbPineapple);
-            grpIngredients.Controls.Add(checkBox6);
+            grpIngredients.Controls.Add(chbPepper);
             grpIngredients.Controls.Add(chbSausage);
             grpIngredients.Controls.Add(chbTomatoes);
             grpIngredients.Font = new Font("Georgia", 12F, FontStyle.Bold);
@@ -89,16 +90,16 @@ namespace PizzaMaker
             grpIngredients.TabStop = false;
             grpIngredients.Text = "Ingredients";
             // 
-            // checkBox1
+            // chbPepperoni
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Georgia", 12F);
-            checkBox1.Location = new Point(15, 34);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(150, 33);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "Pepperoni";
-            checkBox1.CheckedChanged += ChbIngredientCheckedChangedEH;
+            chbPepperoni.AutoSize = true;
+            chbPepperoni.Font = new Font("Georgia", 12F);
+            chbPepperoni.Location = new Point(15, 34);
+            chbPepperoni.Name = "chbPepperoni";
+            chbPepperoni.Size = new Size(150, 33);
+            chbPepperoni.TabIndex = 0;
+            chbPepperoni.Text = "Pepperoni";
+            chbPepperoni.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbBacon
             // 
@@ -144,16 +145,16 @@ namespace PizzaMaker
             chbPineapple.Text = "Pineapple";
             chbPineapple.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
-            // checkBox6
+            // chbPepper
             // 
-            checkBox6.AutoSize = true;
-            checkBox6.Font = new Font("Georgia", 12F);
-            checkBox6.Location = new Point(209, 73);
-            checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(150, 33);
-            checkBox6.TabIndex = 5;
-            checkBox6.Text = "Pepperoni";
-            checkBox6.CheckedChanged += ChbIngredientCheckedChangedEH;
+            chbPepper.AutoSize = true;
+            chbPepper.Font = new Font("Georgia", 12F);
+            chbPepper.Location = new Point(209, 73);
+            chbPepper.Name = "chbPepper";
+            chbPepper.Size = new Size(116, 33);
+            chbPepper.TabIndex = 5;
+            chbPepper.Text = "Pepper";
+            chbPepper.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbSausage
             // 
@@ -271,6 +272,28 @@ namespace PizzaMaker
             gpbExtraGoodies.TabStop = false;
             gpbExtraGoodies.Text = "Extra Goodies";
             // 
+            // lblCheese
+            // 
+            lblCheese.AutoSize = true;
+            lblCheese.Font = new Font("Georgia", 12F);
+            lblCheese.Location = new Point(232, 146);
+            lblCheese.Name = "lblCheese";
+            lblCheese.Size = new Size(43, 29);
+            lblCheese.TabIndex = 5;
+            lblCheese.Text = "00";
+            lblCheese.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblSauce
+            // 
+            lblSauce.AutoSize = true;
+            lblSauce.Font = new Font("Georgia", 12F);
+            lblSauce.Location = new Point(229, 55);
+            lblSauce.Name = "lblSauce";
+            lblSauce.Size = new Size(43, 29);
+            lblSauce.TabIndex = 4;
+            lblSauce.Text = "00";
+            lblSauce.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -287,6 +310,7 @@ namespace PizzaMaker
             hsbSauce.Name = "hsbSauce";
             hsbSauce.Size = new Size(372, 39);
             hsbSauce.TabIndex = 1;
+            hsbSauce.ValueChanged += HsbExtraGoodiesValueChangedEH;
             // 
             // label3
             // 
@@ -304,6 +328,7 @@ namespace PizzaMaker
             hsbCheese.Name = "hsbCheese";
             hsbCheese.Size = new Size(372, 39);
             hsbCheese.TabIndex = 3;
+            hsbCheese.ValueChanged += HsbExtraGoodiesValueChangedEH;
             // 
             // label6
             // 
@@ -317,10 +342,13 @@ namespace PizzaMaker
             // 
             // dtpDeliveryTime
             // 
+            dtpDeliveryTime.CustomFormat = "mm/dd/yyyy hh:mm\" ";
+            dtpDeliveryTime.Format = DateTimePickerFormat.Custom;
             dtpDeliveryTime.Location = new Point(525, 89);
             dtpDeliveryTime.Name = "dtpDeliveryTime";
             dtpDeliveryTime.Size = new Size(409, 35);
             dtpDeliveryTime.TabIndex = 8;
+            dtpDeliveryTime.FormatChanged += DtpDeliveryTimeValueChangedEH;
             // 
             // label7
             // 
@@ -340,6 +368,8 @@ namespace PizzaMaker
             picPizzaBoxColor.Size = new Size(405, 135);
             picPizzaBoxColor.TabIndex = 10;
             picPizzaBoxColor.TabStop = false;
+            picPizzaBoxColor.BackColorChanged += PicPizzaBoxColorClickEH;
+            picPizzaBoxColor.Click += PicPizzaBoxColorClickEH;
             // 
             // label8
             // 
@@ -369,6 +399,7 @@ namespace PizzaMaker
             btnResetForm.Size = new Size(150, 35);
             btnResetForm.TabIndex = 13;
             btnResetForm.Text = "Reset Form";
+            btnResetForm.Click += BtnResetFormClickEH;
             // 
             // btnCreatePizza
             // 
@@ -377,36 +408,15 @@ namespace PizzaMaker
             btnCreatePizza.Size = new Size(178, 35);
             btnCreatePizza.TabIndex = 14;
             btnCreatePizza.Text = "Create Pizza";
-            // 
-            // lblSauce
-            // 
-            lblSauce.AutoSize = true;
-            lblSauce.Font = new Font("Georgia", 12F);
-            lblSauce.Location = new Point(229, 55);
-            lblSauce.Name = "lblSauce";
-            lblSauce.Size = new Size(43, 29);
-            lblSauce.TabIndex = 4;
-            lblSauce.Text = "00";
-            lblSauce.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // lblCheese
-            // 
-            lblCheese.AutoSize = true;
-            lblCheese.Font = new Font("Georgia", 12F);
-            lblCheese.Location = new Point(232, 146);
-            lblCheese.Name = "lblCheese";
-            lblCheese.Size = new Size(43, 29);
-            lblCheese.TabIndex = 5;
-            lblCheese.Text = "00";
-            lblCheese.TextAlign = ContentAlignment.MiddleLeft;
+            btnCreatePizza.Click += BtnResetFormClickEH;
             // 
             // FrmPizzaMaker
             // 
             AutoScaleDimensions = new SizeF(14F, 29F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1011, 833);
+            Controls.Add(lblName);
             Controls.Add(txtName);
-            Controls.Add(textBox1);
             Controls.Add(grpIngredients);
             Controls.Add(label1);
             Controls.Add(lsbStrangeAddOns);
@@ -434,15 +444,15 @@ namespace PizzaMaker
             PerformLayout();
         }
 
-        private Label txtName;
-        private TextBox textBox1;
+        private Label lblName;
+        private TextBox txtName;
         private GroupBox grpIngredients;
-        private CheckBox checkBox1;
+        private CheckBox chbPepperoni;
         private CheckBox chbOlives;
         private CheckBox chbBacon;
         private CheckBox chbMushrooms;
         private CheckBox chbPineapple;
-        private CheckBox checkBox6;
+        private CheckBox chbPepper;
         private CheckBox chbSausage;
         private CheckBox chbTomatoes;
         private Label label1;
