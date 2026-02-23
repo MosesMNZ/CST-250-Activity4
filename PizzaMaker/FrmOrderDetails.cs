@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using PizzaMakerClassLibrary.Models;
 using PizzaMakerClassLibrary.Services.BusinessLogicLayer;
 
+
 namespace PizzaMaker
 {
     public partial class FrmOrderDetails : Form
@@ -62,5 +63,30 @@ namespace PizzaMaker
                     "Price: " + pizza.Price + Environment.NewLine + Environment.NewLine;
             }
         }
+
+        /// <summary>
+        /// Click event handler for btnSaveOrder
+        /// </summary>
+        private void BtnSaveOrderClickEH(object sender, EventArgs e)
+        {
+            // Declare and initialize
+            bool isSaveSuccess = false;
+
+            // Write the order to the file
+            isSaveSuccess = _pizzaLogic.WriteOrderToFile();
+
+            // Check if the save was successful
+            if (isSaveSuccess)
+            {
+                // Show a success message to the user
+                MessageBox.Show("The pizza order was saved.");
+            }
+            else
+            {
+                // Show a failure message to the user
+                MessageBox.Show("An error occurred while trying to save your order. Please try again later.");
+            }
+        }
+
     }
 }

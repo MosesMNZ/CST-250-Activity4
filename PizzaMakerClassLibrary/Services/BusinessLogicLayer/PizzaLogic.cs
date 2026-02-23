@@ -6,7 +6,7 @@
  * Activity 4
  */
 
-using PizzaMaker.Models;
+using PizzaMakerClassLibrary.Models;
 using PizzaMakerClassLibrary.Services.DataAccessLayer;
 
 namespace PizzaMakerClassLibrary.Services.BusinessLogicLayer
@@ -51,6 +51,17 @@ namespace PizzaMakerClassLibrary.Services.BusinessLogicLayer
             // Get and return GetPizzaOrder from the DAO
             return _pizzaDAO.GetPizzaOrder();
         }
+
+        /// <summary>
+        /// Write the pizza order to a text file
+        /// </summary>
+        /// <returns></returns>
+        public bool WriteOrderToFile()
+        {
+            // Get and return WriteOrderToFile from the DAO
+            return _pizzaDAO.WriteOrderToFile();
+        }
+
 
     }
 }

@@ -10,7 +10,7 @@ using System;
 using System.Linq;
 using System.Drawing;
 using System.Windows.Forms;
-using PizzaMaker.Models;
+using PizzaMakerClassLibrary.Models;
 using PizzaMakerClassLibrary.Services.BusinessLogicLayer;
 
 namespace PizzaMaker
@@ -242,22 +242,21 @@ namespace PizzaMaker
                 if (control.HasChildren)
                     ResetControls(control);
             }
+        }
+        /// <summary>
+        /// Click event handler for btnSeeFullOrder
+        /// </summary>
+        private void BtnSeeFullOrderClickEH(object sender, EventArgs e)
+        {
+            List<PizzaModel> pizzaList;
 
-            /// <summary>
-            /// Click event handler for btnSeeFullOrder
-            /// </summary>
-            private void BtnSeeFullOrderClickEH(object sender, EventArgs e)
-            {
-                List<PizzaModel> pizzaList;
+            pizzaList = _pizzaLogic.GetPizzaOrder();
 
-                pizzaList = _pizzaLogic.GetPizzaOrder();
+            FrmOrderDetails frmOrderDetails =
+                new FrmOrderDetails(pizzaList, _pizzaLogic);
 
-                FrmOrderDetails frmOrderDetails =
-                    new FrmOrderDetails(pizzaList, _pizzaLogic);
-
-                frmOrderDetails.DisplayPizzas();
-                frmOrderDetails.ShowDialog();
-            }
+            frmOrderDetails.DisplayPizzas();
+            frmOrderDetails.ShowDialog();
         }
     }
 }

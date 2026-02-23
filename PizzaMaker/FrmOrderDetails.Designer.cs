@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             lblOrderDetails = new Label();
+            btnSaveOrder = new Button();
             SuspendLayout();
             // 
             // lblOrderDetails
@@ -40,11 +41,22 @@
             lblOrderDetails.TabIndex = 0;
             lblOrderDetails.Text = "Order Details";
             // 
+            // btnSaveOrder
+            // 
+            btnSaveOrder.Location = new Point(610, 386);
+            btnSaveOrder.Name = "btnSaveOrder";
+            btnSaveOrder.Size = new Size(112, 34);
+            btnSaveOrder.TabIndex = 1;
+            btnSaveOrder.Text = "Save Order";
+            btnSaveOrder.UseVisualStyleBackColor = true;
+            btnSaveOrder.Click += BtnSaveOrderClickEH;
+            // 
             // FrmOrderDetails
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSaveOrder);
             Controls.Add(lblOrderDetails);
             Name = "FrmOrderDetails";
             Text = "Pizza Order Details";
@@ -55,5 +67,6 @@
         #endregion
 
         private Label lblOrderDetails;
+        private Button btnSaveOrder;
     }
 }
