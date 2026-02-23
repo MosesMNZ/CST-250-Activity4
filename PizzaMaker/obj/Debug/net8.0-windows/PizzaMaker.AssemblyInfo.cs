@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PizzaMaker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e528127fb0ff5ea7d483cf8b84f56146ae27b00")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9f584986de9ed940aa1bbbf7b0414ef08b22e24")]
 [assembly: System.Reflection.AssemblyProductAttribute("PizzaMaker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PizzaMaker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

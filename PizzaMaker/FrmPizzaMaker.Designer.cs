@@ -287,7 +287,6 @@ namespace PizzaMaker
             hsbCheese.Name = "hsbCheese";
             hsbCheese.Size = new Size(372, 39);
             hsbCheese.TabIndex = 3;
-            hsbCheese.Scroll += hsbCheese_Scroll;
             // 
             // label6
             // 
@@ -385,7 +384,6 @@ namespace PizzaMaker
             Font = new Font("Georgia", 12F);
             Name = "FrmPizzaMaker";
             Text = "Pizza Maker";
-            Load += FrmPizzaMaker_Load;
             grpIngredients.ResumeLayout(false);
             grpIngredients.PerformLayout();
             gpbCrust.ResumeLayout(false);
