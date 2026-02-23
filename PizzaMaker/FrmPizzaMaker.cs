@@ -40,6 +40,8 @@ namespace PizzaMaker
             // Disable the Reset Form button
             btnResetForm.Enabled = false;
 
+            btnSeeFullOrder.Enabled = false;
+
             // Wire the Leave event for txtName (FIXED)
             txtName.Leave += TxtNameLeaveEH;
 
@@ -158,18 +160,33 @@ namespace PizzaMaker
         /// <summary>
         /// Click event handler for btnCreatePizza
         /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnCreatePizzaClickEH(object sender, EventArgs e)
         {
+            // Declare and initialize
             bool isValidPizza = false;
             int pizzasInOrder = -1;
 
+            // Use the pizzalogic to call AddPizzaToOrder
             (isValidPizza, pizzasInOrder) = _pizzaLogic.AddPizzaToOrder(_pizza);
 
+            // Check if the pizza was valid
             if (isValidPizza)
             {
+                // Enable the See Full Order button
+                btnSeeFullOrder.Enabled = true;
+
+                // Reset the form
                 ResetForm();
             }
+            else
+            {
+                // Show a failure message to the user
+                MessageBox.Show("Your pizza order is not complete.");
+            }
         }
+
 
         private void BtnResetFormClickEH(object sender, EventArgs e)
         {

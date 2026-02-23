@@ -49,6 +49,7 @@ namespace PizzaMaker
             lblPizzaPrice = new Label();
             btnResetForm = new Button();
             btnCreatePizza = new Button();
+            btnSeeFullOrder = new Button();
             grpIngredients.SuspendLayout();
             gpbCrust.SuspendLayout();
             gpbExtraGoodies.SuspendLayout();
@@ -342,7 +343,7 @@ namespace PizzaMaker
             // 
             // dtpDeliveryTime
             // 
-            dtpDeliveryTime.CustomFormat = "mm/dd/yyyy hh:mm\" ";
+            dtpDeliveryTime.CustomFormat = "mm/dd/yyyy hh:mm";
             dtpDeliveryTime.Format = DateTimePickerFormat.Custom;
             dtpDeliveryTime.Location = new Point(525, 89);
             dtpDeliveryTime.Name = "dtpDeliveryTime";
@@ -410,11 +411,21 @@ namespace PizzaMaker
             btnCreatePizza.Text = "Create Pizza";
             btnCreatePizza.Click += BtnResetFormClickEH;
             // 
+            // btnSeeFullOrder
+            // 
+            btnSeeFullOrder.Location = new Point(533, 455);
+            btnSeeFullOrder.Name = "btnSeeFullOrder";
+            btnSeeFullOrder.Size = new Size(383, 42);
+            btnSeeFullOrder.TabIndex = 15;
+            btnSeeFullOrder.Text = "See Full Order ";
+            btnSeeFullOrder.UseVisualStyleBackColor = true;
+            // 
             // FrmPizzaMaker
             // 
             AutoScaleDimensions = new SizeF(14F, 29F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1011, 833);
+            Controls.Add(btnSeeFullOrder);
             Controls.Add(lblName);
             Controls.Add(txtName);
             Controls.Add(grpIngredients);
@@ -477,5 +488,6 @@ namespace PizzaMaker
         private Button btnCreatePizza;
         private Label lblCheese;
         private Label lblSauce;
+        private Button btnSeeFullOrder;
     }
 }
