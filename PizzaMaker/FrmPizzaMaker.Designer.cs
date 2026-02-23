@@ -47,6 +47,8 @@ namespace PizzaMaker
             lblPizzaPrice = new Label();
             btnResetForm = new Button();
             btnCreatePizza = new Button();
+            lblSauce = new Label();
+            lblCheese = new Label();
             grpIngredients.SuspendLayout();
             gpbCrust.SuspendLayout();
             gpbExtraGoodies.SuspendLayout();
@@ -96,6 +98,7 @@ namespace PizzaMaker
             checkBox1.Size = new Size(150, 33);
             checkBox1.TabIndex = 0;
             checkBox1.Text = "Pepperoni";
+            checkBox1.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbBacon
             // 
@@ -106,6 +109,7 @@ namespace PizzaMaker
             chbBacon.Size = new Size(105, 33);
             chbBacon.TabIndex = 1;
             chbBacon.Text = "Bacon";
+            chbBacon.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbOlives
             // 
@@ -116,6 +120,7 @@ namespace PizzaMaker
             chbOlives.Size = new Size(105, 33);
             chbOlives.TabIndex = 2;
             chbOlives.Text = "Olives";
+            chbOlives.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbMushrooms
             // 
@@ -126,6 +131,7 @@ namespace PizzaMaker
             chbMushrooms.Size = new Size(166, 33);
             chbMushrooms.TabIndex = 3;
             chbMushrooms.Text = "Mushrooms";
+            chbMushrooms.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbPineapple
             // 
@@ -136,6 +142,7 @@ namespace PizzaMaker
             chbPineapple.Size = new Size(146, 33);
             chbPineapple.TabIndex = 4;
             chbPineapple.Text = "Pineapple";
+            chbPineapple.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // checkBox6
             // 
@@ -146,6 +153,7 @@ namespace PizzaMaker
             checkBox6.Size = new Size(150, 33);
             checkBox6.TabIndex = 5;
             checkBox6.Text = "Pepperoni";
+            checkBox6.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbSausage
             // 
@@ -156,6 +164,7 @@ namespace PizzaMaker
             chbSausage.Size = new Size(124, 33);
             chbSausage.TabIndex = 6;
             chbSausage.Text = "Sausage";
+            chbSausage.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbTomatoes
             // 
@@ -166,6 +175,7 @@ namespace PizzaMaker
             chbTomatoes.Size = new Size(143, 33);
             chbTomatoes.TabIndex = 7;
             chbTomatoes.Text = "Tomatoes";
+            chbTomatoes.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // label1
             // 
@@ -185,6 +195,7 @@ namespace PizzaMaker
             lsbStrangeAddOns.SelectionMode = SelectionMode.MultiSimple;
             lsbStrangeAddOns.Size = new Size(180, 120);
             lsbStrangeAddOns.TabIndex = 4;
+            lsbStrangeAddOns.SelectedIndexChanged += LsbStrangeAddOnsSelectedIndexChangedEH;
             // 
             // gpbCrust
             // 
@@ -209,6 +220,7 @@ namespace PizzaMaker
             rdoThinCrust.Size = new Size(151, 33);
             rdoThinCrust.TabIndex = 0;
             rdoThinCrust.Text = "Thin Crust";
+            rdoThinCrust.CheckedChanged += RdoCrustCheckedChangedEH;
             // 
             // rdoDeepDish
             // 
@@ -219,6 +231,7 @@ namespace PizzaMaker
             rdoDeepDish.Size = new Size(149, 33);
             rdoDeepDish.TabIndex = 1;
             rdoDeepDish.Text = "Deep Dish";
+            rdoDeepDish.CheckedChanged += RdoCrustCheckedChangedEH;
             // 
             // rdoStuffedCrust
             // 
@@ -229,6 +242,7 @@ namespace PizzaMaker
             rdoStuffedCrust.Size = new Size(178, 33);
             rdoStuffedCrust.TabIndex = 2;
             rdoStuffedCrust.Text = "Stuffed Crust";
+            rdoStuffedCrust.CheckedChanged += RdoCrustCheckedChangedEH;
             // 
             // rdoGlutenFree
             // 
@@ -239,9 +253,12 @@ namespace PizzaMaker
             rdoGlutenFree.Size = new Size(164, 33);
             rdoGlutenFree.TabIndex = 3;
             rdoGlutenFree.Text = "Gluten Free";
+            rdoGlutenFree.CheckedChanged += RdoCrustCheckedChangedEH;
             // 
             // gpbExtraGoodies
             // 
+            gpbExtraGoodies.Controls.Add(lblCheese);
+            gpbExtraGoodies.Controls.Add(lblSauce);
             gpbExtraGoodies.Controls.Add(label2);
             gpbExtraGoodies.Controls.Add(hsbSauce);
             gpbExtraGoodies.Controls.Add(label3);
@@ -361,6 +378,28 @@ namespace PizzaMaker
             btnCreatePizza.TabIndex = 14;
             btnCreatePizza.Text = "Create Pizza";
             // 
+            // lblSauce
+            // 
+            lblSauce.AutoSize = true;
+            lblSauce.Font = new Font("Georgia", 12F);
+            lblSauce.Location = new Point(229, 55);
+            lblSauce.Name = "lblSauce";
+            lblSauce.Size = new Size(43, 29);
+            lblSauce.TabIndex = 4;
+            lblSauce.Text = "00";
+            lblSauce.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblCheese
+            // 
+            lblCheese.AutoSize = true;
+            lblCheese.Font = new Font("Georgia", 12F);
+            lblCheese.Location = new Point(232, 146);
+            lblCheese.Name = "lblCheese";
+            lblCheese.Size = new Size(43, 29);
+            lblCheese.TabIndex = 5;
+            lblCheese.Text = "00";
+            lblCheese.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // FrmPizzaMaker
             // 
             AutoScaleDimensions = new SizeF(14F, 29F);
@@ -426,5 +465,7 @@ namespace PizzaMaker
         private Label lblPizzaPrice;
         private Button btnResetForm;
         private Button btnCreatePizza;
+        private Label lblCheese;
+        private Label lblSauce;
     }
 }
