@@ -12,7 +12,7 @@ using System.Drawing;
 
 namespace PizzaMaker.Models
 {
-    internal class PizzaModel
+    public class PizzaModel
     {
         // Class properties
         public string ClientName { get; set; }

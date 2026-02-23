@@ -24,5 +24,20 @@ namespace PizzaMakerClassLibrary.Services.DataAccessLayer
             // Initialize the _pizzaOrder list
             _pizzaOrder = new List<PizzaModel>();
         }
+
+        /// <summary>
+        /// Add a pizza to the current order
+        /// </summary>
+        /// <param name="newPizza"></param>
+        /// <returns></returns>
+        public int AddPizzaToOrder(PizzaModel newPizza)
+        {
+            // Add the new pizza to the _pizzaOrder list
+            _pizzaOrder.Add(newPizza);
+
+            // Return the number of pizzas in _pizzaOrder
+            return _pizzaOrder.Count;
+        }
+
     }
 }
