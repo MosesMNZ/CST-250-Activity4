@@ -15,3 +15,8 @@ C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMaker\obj\Debug\net8.0
 C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMaker\obj\Debug\net8.0-windows\PizzaMaker.pdb
 C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMaker\obj\Debug\net8.0-windows\PizzaMaker.genruntimeconfig.cache
 C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMaker\obj\Debug\net8.0-windows\ref\PizzaMaker.dll
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMaker\bin\Debug\net8.0-windows\PizzaMakerClassLibrary.dll
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMaker\bin\Debug\net8.0-windows\PizzaMakerClassLibrary.pdb
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMaker\obj\Debug\net8.0-windows\PizzaMaker.csproj.AssemblyReference.cache
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMaker\obj\Debug\net8.0-windows\PizzaMaker.FrmOrderDetails.resources
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMaker\obj\Debug\net8.0-windows\PizzaMaker.csproj.Up2Date

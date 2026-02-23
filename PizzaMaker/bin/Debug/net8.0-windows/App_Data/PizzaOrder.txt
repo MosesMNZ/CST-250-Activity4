@@ -1,0 +1,22 @@
+Name: Moses
+Ingredients: Bacon, Mushrooms
+Strange Add Ons: Eggs, Garlic
+Crust: Deep Dish
+Sauce: 44
+Cheese: 19
+Delivery Time: 2/23/2026 5:08:19 AM
+Pizza Box Color: Color [White]
+Price: 17.00
+
+
+Name: Me
+Ingredients: Olives
+Strange Add Ons: Eggs
+Crust: Stuffed Crust
+Sauce: 0
+Cheese: 0
+Delivery Time: 2/23/2026 5:08:46 AM
+Pizza Box Color: Color [White]
+Price: 16.00
+
+

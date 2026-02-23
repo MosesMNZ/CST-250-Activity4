@@ -409,7 +409,7 @@ namespace PizzaMaker
             btnCreatePizza.Size = new Size(178, 35);
             btnCreatePizza.TabIndex = 14;
             btnCreatePizza.Text = "Create Pizza";
-            btnCreatePizza.Click += BtnResetFormClickEH;
+            btnCreatePizza.Click += BtnCreatePizzaClickEH;
             // 
             // btnSeeFullOrder
             // 
@@ -419,6 +419,7 @@ namespace PizzaMaker
             btnSeeFullOrder.TabIndex = 15;
             btnSeeFullOrder.Text = "See Full Order ";
             btnSeeFullOrder.UseVisualStyleBackColor = true;
+            btnSeeFullOrder.Click += BtnSeeFullOrderClickEH;
             // 
             // FrmPizzaMaker
             // 

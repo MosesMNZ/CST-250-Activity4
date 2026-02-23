@@ -1,0 +1,12 @@
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\bin\Debug\net8.0\PizzaMakerClassLibrary.deps.json
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\bin\Debug\net8.0\PizzaMakerClassLibrary.dll
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\bin\Debug\net8.0\PizzaMakerClassLibrary.pdb
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\obj\Debug\net8.0\PizzaMakerClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\obj\Debug\net8.0\PizzaMakerClassLibrary.AssemblyInfoInputs.cache
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\obj\Debug\net8.0\PizzaMakerClassLibrary.AssemblyInfo.cs
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\obj\Debug\net8.0\PizzaMakerClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\obj\Debug\net8.0\PizzaMakerClassLibrary.sourcelink.json
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\obj\Debug\net8.0\PizzaMakerClassLibrary.dll
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\obj\Debug\net8.0\refint\PizzaMakerClassLibrary.dll
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\obj\Debug\net8.0\PizzaMakerClassLibrary.pdb
+C:\Users\MosesMNz\Desktop\Studies\CST 250\Activity 4\PizzaMakerClassLibrary\obj\Debug\net8.0\ref\PizzaMakerClassLibrary.dll
