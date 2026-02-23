@@ -7,7 +7,8 @@
  */
 
 using System.Collections.Generic;
-using PizzaMaker.Models;
+using PizzaMakerClassLibrary.Models;
+
 
 namespace PizzaMakerClassLibrary.Services.DataAccessLayer
 {
@@ -38,6 +39,17 @@ namespace PizzaMakerClassLibrary.Services.DataAccessLayer
             // Return the number of pizzas in _pizzaOrder
             return _pizzaOrder.Count;
         }
+
+        /// <summary>
+        /// Get the list of pizzas in the current order
+        /// </summary>
+        /// <returns></returns>
+        public List<PizzaModel> GetPizzaOrder()
+        {
+            // Return the pizzaOrder list
+            return _pizzaOrder;
+        }
+
 
     }
 }

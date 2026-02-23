@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace PizzaMaker.Models
+namespace PizzaMakerClassLibrary.Models
 {
     public class PizzaModel
     {

@@ -242,6 +242,22 @@ namespace PizzaMaker
                 if (control.HasChildren)
                     ResetControls(control);
             }
+
+            /// <summary>
+            /// Click event handler for btnSeeFullOrder
+            /// </summary>
+            private void BtnSeeFullOrderClickEH(object sender, EventArgs e)
+            {
+                List<PizzaModel> pizzaList;
+
+                pizzaList = _pizzaLogic.GetPizzaOrder();
+
+                FrmOrderDetails frmOrderDetails =
+                    new FrmOrderDetails(pizzaList, _pizzaLogic);
+
+                frmOrderDetails.DisplayPizzas();
+                frmOrderDetails.ShowDialog();
+            }
         }
     }
 }
